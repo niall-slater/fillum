@@ -39,8 +39,7 @@ export class Search extends React.Component {
 				}
 			
 				response.json().then(data => {
-					const results = data.results;
-					this.setState({ results });
+					this.setState({ results: data });
 				});
 			})
 			.catch(err => {

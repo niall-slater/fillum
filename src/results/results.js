@@ -5,23 +5,13 @@ import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button} from
 
 export class Results extends React.Component {
 	
-	constructor(props) {
-		super(props);
-		
-		this.state = {
-			results: []
-		}
-		
-	}
-	
 	componentDidMount() {
 		var newResults = this.props.results;
 		this.setState({results: newResults});
 	}
 	
-	//this.state.results returns an empty array - the search callback isn't working yet
-	
 	render() {
+		console.log(this.props.results);
 		return(
 			<div className="results">
 				<Card>
