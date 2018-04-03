@@ -1,3 +1,8 @@
-img {
-	max-width: 25%;
+.results {
+    width: 94%;
+    margin: 1em auto;
+}
+
+.Card {
+	width: 25%;
 }

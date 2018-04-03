@@ -1,7 +1,7 @@
 import React from 'react';
 import './results.css';
 
-import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button} from 'reactstrap'
+import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button, Row, Col} from 'reactstrap'
 
 export class Results extends React.Component {
 	
@@ -14,25 +14,41 @@ export class Results extends React.Component {
 		var title = "Title";
 		var year = "Year";
 		var poster = "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180";
+        
+        var cards = [];
 		
 		if (this.props.results.Search !== undefined) {
-			var foundItem = this.props.results.Search[0];
-			title = foundItem.Title;
-			year = foundItem.Year;
-			poster = foundItem.Poster;
+            
+            var searchResults = this.props.results.Search;
+            
+            for (var i = 0; i < searchResults.length; i++) {
+                var foundItem = searchResults[i];
+                
+                title = foundItem.Title;
+                year = foundItem.Year;
+                poster = foundItem.Poster;
+                
+                var cardObject = (
+                    <Card className="Card">
+                        <CardImg top width="100%" src={poster} alt="Card image cap" />
+                        <CardBody>
+                            <CardTitle>{title}</CardTitle>
+                            <CardSubtitle>{year}</CardSubtitle>
+                            <CardText>Description</CardText>
+                            <Button>Button</Button>
+                        </CardBody>
+                    </Card>
+                );
+                
+                cards.push(cardObject);
+            }
 		}
 		
 		return(
 			<div className="results">
-				<Card>
-					<CardImg top width="100%" src={poster} alt="Card image cap" />
-					<CardBody>
-						<CardTitle>{title}</CardTitle>
-						<CardSubtitle>{year}</CardSubtitle>
-						<CardText>Description</CardText>
-						<Button>Button</Button>
-					</CardBody>
-				</Card>
+                <Row>
+                    {cards}
+                </Row>
 			</div>
 		);
 	}
