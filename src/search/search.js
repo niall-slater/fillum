@@ -29,8 +29,6 @@ export class Search extends React.Component {
 		const apiKey = '7849b321';
 		const apiUrl = 'http://www.omdbapi.com/?apikey=' + apiKey + '&';
 		
-		console.log('searching');
-		
 		fetch(apiUrl + queryString + "&plot=short")
 			.then(response => {
 				if (response.status !== 200) {

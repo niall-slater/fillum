@@ -6,7 +6,7 @@ import {Search} from './search/search';
 class App extends React.Component {
 	render() {
 		return (
-			<div className="container">
+			<div className="container" id="reactStrapOverride">
 				<Header />
 				<Search />
 			</div>

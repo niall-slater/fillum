@@ -1,7 +1,7 @@
 import React from 'react';
 import './results.css';
 
-import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button, Row} from 'reactstrap'
+import {Card, CardImg, CardBody, CardTitle, CardSubtitle, Row} from 'reactstrap'
 
 export class Results extends React.Component {
 	
@@ -33,13 +33,11 @@ export class Results extends React.Component {
                 }
                 
                 var cardObject = (
-                    <Card className="Card">
-                        <CardImg top width="100%" src={poster} alt="Card image cap" />
-                        <CardBody>
-                            <CardTitle>{title}</CardTitle>
-                            <CardSubtitle>{year}</CardSubtitle>
-                            <CardText>Description</CardText>
-                            <Button>Button</Button>
+                    <Card className="Card" key={i}>
+                        <CardImg className="CardImg" top width="100%" src={poster} alt="Card image cap" />
+                        <CardBody className="CardBody">
+                            <CardTitle className="CardTitle">{title}</CardTitle>
+                            <CardSubtitle className="CardSubtitle">{year}</CardSubtitle>
                         </CardBody>
                     </Card>
                 );
