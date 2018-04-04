@@ -13,7 +13,7 @@ export class Results extends React.Component {
 	render() {
 		var title = "Title";
 		var year = "Year";
-		var poster = "Poster";
+		var poster = "../img/loading.svg";
         
         var cards = [];
 		
