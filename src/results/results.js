@@ -1,7 +1,7 @@
 import React from 'react';
 import './results.css';
 
-import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button, Row, Col} from 'reactstrap'
+import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button, Row} from 'reactstrap'
 
 export class Results extends React.Component {
 	
@@ -13,7 +13,7 @@ export class Results extends React.Component {
 	render() {
 		var title = "Title";
 		var year = "Year";
-		var poster = "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180";
+		var poster = '../img/404.png';
         
         var cards = [];
 		
@@ -27,6 +27,10 @@ export class Results extends React.Component {
                 title = foundItem.Title;
                 year = foundItem.Year;
                 poster = foundItem.Poster;
+                
+                if (poster.includes('N/A')) {
+                    poster = require("../img/404.png");
+                }
                 
                 var cardObject = (
                     <Card className="Card">

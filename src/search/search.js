@@ -31,7 +31,7 @@ export class Search extends React.Component {
 		
 		console.log('searching');
 		
-		fetch(apiUrl + queryString)
+		fetch(apiUrl + queryString + "&plot=short")
 			.then(response => {
 				if (response.status !== 200) {
 					console.log('Error: ' + response.status);
@@ -44,7 +44,7 @@ export class Search extends React.Component {
 			})
 			.catch(err => {
 				console.log('Error fetching results', err);
-			})
+			});
 	}
 	
 	render() {
