@@ -49,7 +49,7 @@ export class Search extends React.Component {
 		return(
 			<div>
 				<form onSubmit={this.handleSubmit} className="searchForm">
-					<input onKeyUp={this.handleKeyUp} className="searchBar" type="text" placeholder="What genre? Comedy? Romance? Action?" id="searchBar" />
+					<input onKeyUp={this.handleKeyUp} className="searchBar" type="text" placeholder="Start typing a movie title" id="searchBar" />
 				</form>
 				<Results results={this.state.results} />
 			</div>
