@@ -1,10 +1,15 @@
 .results {
-    width: 94%;
+    width: 640px;
     margin: 1em auto;
 }
 
 .Card {
-	width: 25%;
+	width: 140px;
+    margin: 4px auto;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+    background: radial-gradient(#555, #777);
+    color: #fff;
+    padding: 0px;
 }
 
 #reactStrapOverride .CardBody {
@@ -22,10 +27,15 @@
 
 .CardTitle {
     font-size: .8em;
+    font-weight: 600;
 }
 
 .CardSubtitle {
     font-size: .6em;
+    position: absolute;
+    bottom: 4px;
+    text-align: right;
+    right: 4px;
 }
 
 .Button {

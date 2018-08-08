@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 
 import {Header} from './header/header';
 import {Search} from './search/search';
@@ -6,7 +7,7 @@ import {Search} from './search/search';
 class App extends React.Component {
 	render() {
 		return (
-			<div className="container" id="reactStrapOverride">
+			<div className="App" id="reactStrapOverride">
 				<Header />
 				<Search />
 			</div>

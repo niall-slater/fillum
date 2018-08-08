@@ -29,12 +29,13 @@ export class Results extends React.Component {
                 poster = foundItem.Poster;
                 
                 if (poster.includes('N/A')) {
-                    poster = require("../img/404.png");
+                    continue;
+                    //poster = require("../img/404.png");
                 }
                 
                 var cardObject = (
                     <Card className="Card" key={i}>
-                        <CardImg className="CardImg" top width="100%" src={poster} alt="Card image cap" />
+                        <CardImg className="CardImg" src={poster} alt="Card image cap" />
                         <CardBody className="CardBody">
                             <CardTitle className="CardTitle">{title}</CardTitle>
                             <CardSubtitle className="CardSubtitle">{year}</CardSubtitle>
